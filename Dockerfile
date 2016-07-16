@@ -18,7 +18,7 @@ RUN sed -i 's/httpredir.debian.org/mirrors.ustc.edu.cn/g' /etc/apt/sources.list
 #################################
 
 RUN apt-get update
-RUN apt-get -y install curl wget
+RUN apt-get -y install curl wget xzip
 
 #################################
 #
