@@ -5,6 +5,8 @@ Development environment for CatchLabs.
 - Node.js v6.3.0
 - Android Build Tools 24.0.0 (aapt, zipalign...)
 - openjdk-8-jdk
+- libc6:i386
+- lib32z1
 
 ## Build
 
