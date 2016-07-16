@@ -5,6 +5,23 @@ FROM debian:sid
 
 #################################
 #
+# USTC Mirros
+#
+#################################
+
+RUN sed -i 's/httpredir.debian.org/mirrors.ustc.edu.cn/g' /etc/apt/sources.list
+
+#################################
+#
+# Basic tools
+#
+#################################
+
+RUN apt-get update
+RUN apt-get -y install curl wget
+
+#################################
+#
 # Node.js v6.3.0
 #
 #################################

@@ -2,17 +2,12 @@
 
 Development environment for CatchLabs.
 
-- Oracle JDK 7
-- Android SDK 24.4.1
-- Android Tools
-- Android NDK
-- Gradle 2.13
 - Node.js v6.3.0
 
 ## Build
 
 ```bash
-docker build -t="catchlabs/dev" .
+docker build -t="catchlabs/dev"  github.com/CatchLabs/docker-catch-dev
 ```
 
 ## Usage
