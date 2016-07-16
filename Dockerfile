@@ -1,5 +1,4 @@
 # Development environment for CatchLabs.
-# Version 0.4.0
 
 FROM debian:sid
 
@@ -50,12 +49,17 @@ RUN curl -SLO "https://nodejs.org/dist/v$NODE_VERSION/node-v$NODE_VERSION-linux-
 
 #################################
 #
-# Android SDK (build-tools)
+# Libs
 #
 ################################
 
+ENV CATCH_DEV_LIB_VERSION 1
+RUN curl -SLO "https://dn-catch-static.qbox.me/dev/catch-dev-libs-v$CATCH_DEV_LIB_VERSION.tar.xz" \
+  && tar -xJf "catch-dev-libs-v$CATCH_DEV_LIB_VERSION.tar.xz" -C /opt --strip-components=1 \
+  && rm "catch-dev-libs-v$CATCH_DEV_LIB_VERSION.tar.xz"
+
 ENV ANDROID_SDK_HOME /opt/android-sdk
-ENV PATH $PATH:$ANDROID_SDK_HOME/build-tools
+ENV PATH $PATH:$ANDROID_SDK_HOME/build-tools/24.0.0
 
 #################################
 #
@@ -63,4 +67,4 @@ ENV PATH $PATH:$ANDROID_SDK_HOME/build-tools
 #
 #################################
 
-ENV CATCH_DEV_VERSION 0.5.0
+ENV CATCH_DEV_VERSION 0.6.0
