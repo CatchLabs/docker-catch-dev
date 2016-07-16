@@ -1,0 +1,1 @@
+FROM xzan/docker-android-dev
