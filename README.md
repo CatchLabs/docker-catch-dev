@@ -7,6 +7,7 @@ Development environment for CatchLabs.
 - Android Tools
 - Android NDK
 - Gradle 2.13
+- Node.js v6.3.0
 
 ## Build
 
