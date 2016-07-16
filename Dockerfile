@@ -1,15 +1,7 @@
 # Development environment for CatchLabs.
-# Version 0.3.0
+# Version 0.4.0
 
-FROM xzan/docker-android-dev
-
-#################################
-#
-# Env for CatchLabs
-#
-#################################
-
-ENV CATCH_DEV_VERSION 0.3.0
+FROM debian:sid
 
 #################################
 #
@@ -38,3 +30,11 @@ RUN curl -SLO "https://nodejs.org/dist/v$NODE_VERSION/node-v$NODE_VERSION-linux-
   && grep " node-v$NODE_VERSION-linux-x64.tar.xz\$" SHASUMS256.txt | sha256sum -c - \
   && tar -xJf "node-v$NODE_VERSION-linux-x64.tar.xz" -C /usr/local --strip-components=1 \
   && rm "node-v$NODE_VERSION-linux-x64.tar.xz" SHASUMS256.txt.asc SHASUMS256.txt
+
+#################################
+#
+# Env for CatchLabs
+#
+#################################
+
+ENV CATCH_DEV_VERSION 0.4.0
