@@ -74,4 +74,4 @@ RUN apt-get -y install libc6:i386 lib32z1
 #
 #################################
 
-ENV CATCH_DEV_VERSION 0.6.0
+ENV CATCH_DEV_VERSION 0.7.0
