@@ -61,6 +61,8 @@ RUN curl -SLO "https://dn-catch-static.qbox.me/dev/catch-dev-libs-v$CATCH_DEV_LI
 ENV ANDROID_SDK_HOME /opt/android-sdk
 ENV PATH $PATH:$ANDROID_SDK_HOME/build-tools/24.0.0
 
+RUN apt-get -y install openjdk-8-jdk
+
 #################################
 #
 # Env for CatchLabs
