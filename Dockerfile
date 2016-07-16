@@ -63,6 +63,11 @@ ENV PATH $PATH:$ANDROID_SDK_HOME/build-tools/24.0.0
 
 RUN apt-get -y install openjdk-8-jdk
 
+# for aapt
+RUN dpkg --add-architecture i386
+RUN apt-get update
+RUN apt-get -y install libc6:i386 lib32z1
+
 #################################
 #
 # Env for CatchLabs
