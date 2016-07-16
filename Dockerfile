@@ -18,7 +18,7 @@ RUN sed -i 's/httpredir.debian.org/mirrors.ustc.edu.cn/g' /etc/apt/sources.list
 #################################
 
 RUN apt-get update
-RUN apt-get -y install curl wget xzip
+RUN apt-get -y install curl wget xz-utils
 
 #################################
 #
@@ -50,8 +50,17 @@ RUN curl -SLO "https://nodejs.org/dist/v$NODE_VERSION/node-v$NODE_VERSION-linux-
 
 #################################
 #
+# Android SDK (build-tools)
+#
+################################
+
+ENV ANDROID_SDK_HOME /opt/android-sdk
+ENV PATH $PATH:$ANDROID_SDK_HOME/build-tools
+
+#################################
+#
 # Env for CatchLabs
 #
 #################################
 
-ENV CATCH_DEV_VERSION 0.4.0
+ENV CATCH_DEV_VERSION 0.5.0
