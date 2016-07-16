@@ -1,3 +1,6 @@
+# Development environment for CatchLabs.
+# Version 0.2.0
+
 FROM xzan/docker-android-dev
 
 #################################
